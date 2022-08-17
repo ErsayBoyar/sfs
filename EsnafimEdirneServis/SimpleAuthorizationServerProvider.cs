@@ -23,7 +23,7 @@ namespace EsnafimEdirneServis
             context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
             // Kullanıcının access_token alabilmesi için gerekli validation işlemlerini yapıyoruz.
-            if (context.UserName == "rotatech" && context.Password == "3rs@y1817")
+            if (context.UserName == "rota" && context.Password == "3r@y1817")
             {
                 var identity = new ClaimsIdentity(context.Options.AuthenticationType);
 

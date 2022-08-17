@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EsnafimEdirneModelStoreContainer" CdmEntityContainer="EsnafimEdirneEntities">
+    <EntitySetMapping Name="EsnafHesap">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.EsnafHesap">
+        <MappingFragment StoreEntitySet="EsnafHesap">
+          <ScalarProperty Name="Sil" ColumnName="Sil" />
+          <ScalarProperty Name="Iban" ColumnName="Iban" />
+          <ScalarProperty Name="HesapAd" ColumnName="HesapAd" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EsnafKayitt">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.EsnafKayitt">
+        <MappingFragment StoreEntitySet="EsnafKayitt">
+          <ScalarProperty Name="FirmaUnvan" ColumnName="FirmaUnvan" />
+          <ScalarProperty Name="VergiNo" ColumnName="VergiNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HizmetKategori">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.HizmetKategori">
+        <MappingFragment StoreEntitySet="HizmetKategori">
+          <ScalarProperty Name="FotoYol" ColumnName="FotoYol" />
+          <ScalarProperty Name="Sil" ColumnName="Sil" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HizmetSaat">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.HizmetSaat">
+        <MappingFragment StoreEntitySet="HizmetSaat">
+          <ScalarProperty Name="Acik" ColumnName="Acik" />
+          <ScalarProperty Name="SaatBitis" ColumnName="SaatBitis" />
+          <ScalarProperty Name="SaatBaslama" ColumnName="SaatBaslama" />
+          <ScalarProperty Name="EsnafId" ColumnName="EsnafId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ilce">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.Ilce">
+        <MappingFragment StoreEntitySet="Ilce">
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kampanya">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.Kampanya">
+        <MappingFragment StoreEntitySet="Kampanya">
+          <ScalarProperty Name="Sil" ColumnName="Sil" />
+          <ScalarProperty Name="Oran" ColumnName="Oran" />
+          <ScalarProperty Name="BitisZamani" ColumnName="BitisZamani" />
+          <ScalarProperty Name="BaslamaZamani" ColumnName="BaslamaZamani" />
+          <ScalarProperty Name="EsnafId" ColumnName="EsnafId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanici">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.kullanici">
+        <MappingFragment StoreEntitySet="kullanici">
+          <ScalarProperty Name="Sil" ColumnName="Sil" />
+          <ScalarProperty Name="ResetSifre" ColumnName="ResetSifre" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MainSayfa">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.MainSayfa">
+        <MappingFragment StoreEntitySet="MainSayfa">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Musteri">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.Musteri">
+        <MappingFragment StoreEntitySet="Musteri">
+          <ScalarProperty Name="EPostaOnay" ColumnName="EPostaOnay" />
+          <ScalarProperty Name="EPostaCheck" ColumnName="EPostaCheck" />
+          <ScalarProperty Name="Lon" ColumnName="Lon" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Sil" ColumnName="Sil" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="EPosta" ColumnName="EPosta" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MusteriAdres">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.MusteriAdres">
+        <MappingFragment StoreEntitySet="MusteriAdres">
+          <ScalarProperty Name="AdresTarifi" ColumnName="AdresTarifi" />
+          <ScalarProperty Name="Sil" ColumnName="Sil" />
+          <ScalarProperty Name="Lon" ColumnName="Lon" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Kat" ColumnName="Kat" />
+          <ScalarProperty Name="Daire" ColumnName="Daire" />
+          <ScalarProperty Name="BinaNo" ColumnName="BinaNo" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="AdresAd" ColumnName="AdresAd" />
+          <ScalarProperty Name="MusteriId" ColumnName="MusteriId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OdemeDurum">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.OdemeDurum">
+        <MappingFragment StoreEntitySet="OdemeDurum">
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sayfa">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.Sayfa">
+        <MappingFragment StoreEntitySet="Sayfa">
+          <ScalarProperty Name="MainSayfaId" ColumnName="MainSayfaId" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SayfaYetki">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.SayfaYetki">
+        <MappingFragment StoreEntitySet="SayfaYetki">
+          <ScalarProperty Name="KulliciId" ColumnName="KulliciId" />
+          <ScalarProperty Name="SayfaId" ColumnName="SayfaId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Siparis">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.Siparis">
+        <MappingFragment StoreEntitySet="Siparis">
+          <ScalarProperty Name="IndirimliTutar" ColumnName="IndirimliTutar" />
+          <ScalarProperty Name="IndirimTutari" ColumnName="IndirimTutari" />
+          <ScalarProperty Name="Onay" ColumnName="Onay" />
+          <ScalarProperty Name="ToplamTutar" ColumnName="ToplamTutar" />
+          <ScalarProperty Name="Sil" ColumnName="Sil" />
+          <ScalarProperty Name="EsnafId" ColumnName="EsnafId" />
+          <ScalarProperty Name="MusteriId" ColumnName="MusteriId" />
+          <ScalarProperty Name="AdresId" ColumnName="AdresId" />
+          <ScalarProperty Name="DurumId" ColumnName="DurumId" />
+          <ScalarProperty Name="OdemeId" ColumnName="OdemeId" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="SiparisNotu" ColumnName="SiparisNotu" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiparisDetay">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.SiparisDetay">
+        <MappingFragment StoreEntitySet="SiparisDetay">
+          <ScalarProperty Name="IndirimliTutar" ColumnName="IndirimliTutar" />
+          <ScalarProperty Name="IndirimTutari" ColumnName="IndirimTutari" />
+          <ScalarProperty Name="EsnafId" ColumnName="EsnafId" />
+          <ScalarProperty Name="MusteriId" ColumnName="MusteriId" />
+          <ScalarProperty Name="Sil" ColumnName="Sil" />
+          <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+          <ScalarProperty Name="Adet" ColumnName="Adet" />
+          <ScalarProperty Name="UrunId" ColumnName="UrunId" />
+          <ScalarProperty Name="SiparisId" ColumnName="SiparisId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiparisDurum">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.SiparisDurum">
+        <MappingFragment StoreEntitySet="SiparisDurum">
+          <ScalarProperty Name="Sil" ColumnName="Sil" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiparisOdemeTur">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.SiparisOdemeTur">
+        <MappingFragment StoreEntitySet="SiparisOdemeTur">
+          <ScalarProperty Name="Sil" ColumnName="Sil" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Urun">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.Urun">
+        <MappingFragment StoreEntitySet="Urun">
+          <ScalarProperty Name="Mevcut" ColumnName="Mevcut" />
+          <ScalarProperty Name="Sil" ColumnName="Sil" />
+          <ScalarProperty Name="KdvId" ColumnName="KdvId" />
+          <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+          <ScalarProperty Name="EsnafId" ColumnName="EsnafId" />
+          <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+          <ScalarProperty Name="FotoYol" ColumnName="FotoYol" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UrunKategori">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.UrunKategori">
+        <MappingFragment StoreEntitySet="UrunKategori">
+          <ScalarProperty Name="Sil" ColumnName="Sil" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="EsnafId" ColumnName="EsnafId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vergi">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.Vergi">
+        <MappingFragment StoreEntitySet="Vergi">
+          <ScalarProperty Name="Oran" ColumnName="Oran" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Esnaf">
+      <EntityTypeMapping TypeName="EsnafimEdirneModel.Esnaf">
+        <MappingFragment StoreEntitySet="Esnaf">
+          <ScalarProperty Name="TeslimatSuresi" ColumnName="TeslimatSuresi" />
+          <ScalarProperty Name="Hizmet7" ColumnName="Hizmet7" />
+          <ScalarProperty Name="HizmetBitis7" ColumnName="HizmetBitis7" />
+          <ScalarProperty Name="HizmetBaslama7" ColumnName="HizmetBaslama7" />
+          <ScalarProperty Name="Hizmet6" ColumnName="Hizmet6" />
+          <ScalarProperty Name="HizmetBitis6" ColumnName="HizmetBitis6" />
+          <ScalarProperty Name="HizmetBaslama6" ColumnName="HizmetBaslama6" />
+          <ScalarProperty Name="Hizmet5" ColumnName="Hizmet5" />
+          <ScalarProperty Name="HizmetBitis5" ColumnName="HizmetBitis5" />
+          <ScalarProperty Name="HizmetBaslama5" ColumnName="HizmetBaslama5" />
+          <ScalarProperty Name="Hizmet4" ColumnName="Hizmet4" />
+          <ScalarProperty Name="HizmetBitis4" ColumnName="HizmetBitis4" />
+          <ScalarProperty Name="HizmetBaslama4" ColumnName="HizmetBaslama4" />
+          <ScalarProperty Name="Hizmet3" ColumnName="Hizmet3" />
+          <ScalarProperty Name="HizmetBitis3" ColumnName="HizmetBitis3" />
+          <ScalarProperty Name="HizmetBaslama3" ColumnName="HizmetBaslama3" />
+          <ScalarProperty Name="Hizmet2" ColumnName="Hizmet2" />
+          <ScalarProperty Name="HizmetBitis2" ColumnName="HizmetBitis2" />
+          <ScalarProperty Name="HizmetBaslama2" ColumnName="HizmetBaslama2" />
+          <ScalarProperty Name="Hizmet1" ColumnName="Hizmet1" />
+          <ScalarProperty Name="HizmetBitis1" ColumnName="HizmetBitis1" />
+          <ScalarProperty Name="HizmetBaslama1" ColumnName="HizmetBaslama1" />
+          <ScalarProperty Name="EpostaOnay" ColumnName="EpostaOnay" />
+          <ScalarProperty Name="FotoYol" ColumnName="FotoYol" />
+          <ScalarProperty Name="Online" ColumnName="Online" />
+          <ScalarProperty Name="Lon" ColumnName="Lon" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="IlceId" ColumnName="IlceId" />
+          <ScalarProperty Name="EPostaCheck" ColumnName="EPostaCheck" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="MinSiparis" ColumnName="MinSiparis" />
+          <ScalarProperty Name="KapidaNakit" ColumnName="KapidaNakit" />
+          <ScalarProperty Name="KapidaKredi" ColumnName="KapidaKredi" />
+          <ScalarProperty Name="HizmetKategoriID" ColumnName="HizmetKategoriID" />
+          <ScalarProperty Name="EPosta" ColumnName="EPosta" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="KisaAd" ColumnName="KisaAd" />
+          <ScalarProperty Name="VergiNo" ColumnName="VergiNo" />
+          <ScalarProperty Name="FirmaUnvan" ColumnName="FirmaUnvan" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

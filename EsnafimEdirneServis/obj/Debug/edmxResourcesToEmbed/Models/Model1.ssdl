@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EsnafimEdirneModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Esnaf">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirmaUnvan" Type="nvarchar(max)" />
+    <Property Name="VergiNo" Type="nvarchar(max)" />
+    <Property Name="KisaAd" Type="nvarchar(max)" />
+    <Property Name="Telefon" Type="nvarchar(max)" />
+    <Property Name="EPosta" Type="nvarchar(max)" />
+    <Property Name="HizmetKategoriID" Type="int" />
+    <Property Name="KapidaKredi" Type="bit" />
+    <Property Name="KapidaNakit" Type="bit" />
+    <Property Name="MinSiparis" Type="money" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="EPostaCheck" Type="nvarchar(max)" />
+    <Property Name="IlceId" Type="int" />
+    <Property Name="Adres" Type="nvarchar(max)" />
+    <Property Name="Sifre" Type="nvarchar(max)" />
+    <Property Name="Token" Type="nvarchar(max)" />
+    <Property Name="Lat" Type="nvarchar(max)" />
+    <Property Name="Lon" Type="nvarchar(max)" />
+    <Property Name="Online" Type="bit" />
+    <Property Name="FotoYol" Type="nvarchar(max)" />
+    <Property Name="EpostaOnay" Type="bit" />
+    <Property Name="HizmetBaslama1" Type="time" Precision="7" />
+    <Property Name="HizmetBitis1" Type="time" Precision="7" />
+    <Property Name="Hizmet1" Type="bit" />
+    <Property Name="HizmetBaslama2" Type="time" Precision="7" />
+    <Property Name="HizmetBitis2" Type="time" Precision="7" />
+    <Property Name="Hizmet2" Type="bit" />
+    <Property Name="HizmetBaslama3" Type="time" Precision="7" />
+    <Property Name="HizmetBitis3" Type="time" Precision="7" />
+    <Property Name="Hizmet3" Type="bit" />
+    <Property Name="HizmetBaslama4" Type="time" Precision="7" />
+    <Property Name="HizmetBitis4" Type="time" Precision="7" />
+    <Property Name="Hizmet4" Type="bit" />
+    <Property Name="HizmetBaslama5" Type="time" Precision="7" />
+    <Property Name="HizmetBitis5" Type="time" Precision="7" />
+    <Property Name="Hizmet5" Type="bit" />
+    <Property Name="HizmetBaslama6" Type="time" Precision="7" />
+    <Property Name="HizmetBitis6" Type="time" Precision="7" />
+    <Property Name="Hizmet6" Type="bit" />
+    <Property Name="HizmetBaslama7" Type="time" Precision="7" />
+    <Property Name="HizmetBitis7" Type="time" Precision="7" />
+    <Property Name="Hizmet7" Type="bit" />
+    <Property Name="TeslimatSuresi" Type="int" />
+  </EntityType>
+  <EntityType Name="EsnafHesap">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HesapAd" Type="nvarchar(max)" />
+    <Property Name="Iban" Type="nvarchar(max)" />
+    <Property Name="Sil" Type="bit" />
+  </EntityType>
+  <EntityType Name="EsnafKayitt">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VergiNo" Type="nvarchar(max)" />
+    <Property Name="FirmaUnvan" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="HizmetKategori">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar(max)" />
+    <Property Name="Sil" Type="bit" />
+    <Property Name="FotoYol" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="HizmetSaat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EsnafId" Type="int" />
+    <Property Name="SaatBaslama" Type="time" Precision="7" />
+    <Property Name="SaatBitis" Type="time" Precision="7" />
+    <Property Name="Acik" Type="bit" />
+  </EntityType>
+  <EntityType Name="Ilce">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Kampanya">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EsnafId" Type="int" />
+    <Property Name="BaslamaZamani" Type="datetime" />
+    <Property Name="BitisZamani" Type="datetime" />
+    <Property Name="Oran" Type="float" />
+    <Property Name="Sil" Type="bit" />
+  </EntityType>
+  <EntityType Name="kullanici">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sifre" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="RoleId" Type="int" />
+    <Property Name="ResetSifre" Type="nvarchar(max)" />
+    <Property Name="Sil" Type="bit" />
+  </EntityType>
+  <EntityType Name="MainSayfa">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Musteri">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar(max)" />
+    <Property Name="Soyad" Type="nvarchar(max)" />
+    <Property Name="EPosta" Type="nvarchar(max)" />
+    <Property Name="Telefon" Type="nvarchar(max)" />
+    <Property Name="Sil" Type="bit" />
+    <Property Name="Sifre" Type="nvarchar(max)" />
+    <Property Name="Token" Type="nvarchar(max)" />
+    <Property Name="Lat" Type="nvarchar(max)" />
+    <Property Name="Lon" Type="nvarchar(max)" />
+    <Property Name="EPostaCheck" Type="nvarchar(max)" />
+    <Property Name="EPostaOnay" Type="bit" />
+  </EntityType>
+  <EntityType Name="MusteriAdres">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriId" Type="int" />
+    <Property Name="AdresAd" Type="nvarchar(max)" />
+    <Property Name="Adres" Type="nvarchar(max)" />
+    <Property Name="BinaNo" Type="nvarchar(max)" />
+    <Property Name="Daire" Type="nvarchar(max)" />
+    <Property Name="Kat" Type="nvarchar(max)" />
+    <Property Name="Lat" Type="nvarchar(max)" />
+    <Property Name="Lon" Type="nvarchar(max)" />
+    <Property Name="Sil" Type="bit" />
+    <Property Name="AdresTarifi" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="OdemeDurum">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Sayfa">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="250" />
+    <Property Name="MainSayfaId" Type="int" />
+  </EntityType>
+  <EntityType Name="SayfaYetki">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SayfaId" Type="int" Nullable="false" />
+    <Property Name="KulliciId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Siparis">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SiparisNotu" Type="nvarchar(max)" />
+    <Property Name="Tarih" Type="datetime" />
+    <Property Name="OdemeId" Type="int" />
+    <Property Name="DurumId" Type="int" />
+    <Property Name="AdresId" Type="int" />
+    <Property Name="MusteriId" Type="int" />
+    <Property Name="EsnafId" Type="int" />
+    <Property Name="Sil" Type="bit" />
+    <Property Name="ToplamTutar" Type="money" />
+    <Property Name="Onay" Type="bit" />
+    <Property Name="IndirimTutari" Type="money" />
+    <Property Name="IndirimliTutar" Type="money" />
+  </EntityType>
+  <EntityType Name="SiparisDetay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SiparisId" Type="int" />
+    <Property Name="UrunId" Type="int" />
+    <Property Name="Adet" Type="int" />
+    <Property Name="Fiyat" Type="money" />
+    <Property Name="Sil" Type="bit" />
+    <Property Name="MusteriId" Type="int" />
+    <Property Name="EsnafId" Type="int" />
+    <Property Name="IndirimTutari" Type="money" />
+    <Property Name="IndirimliTutar" Type="money" />
+  </EntityType>
+  <EntityType Name="SiparisDurum">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar(max)" />
+    <Property Name="Sil" Type="bit" />
+  </EntityType>
+  <EntityType Name="SiparisOdemeTur">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar(max)" />
+    <Property Name="Sil" Type="bit" />
+  </EntityType>
+  <EntityType Name="Urun">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar(max)" />
+    <Property Name="Aciklama" Type="nvarchar(max)" />
+    <Property Name="FotoYol" Type="nvarchar(max)" />
+    <Property Name="Fiyat" Type="money" />
+    <Property Name="EsnafId" Type="int" />
+    <Property Name="KategoriId" Type="int" />
+    <Property Name="KdvId" Type="int" />
+    <Property Name="Sil" Type="bit" />
+    <Property Name="Mevcut" Type="bit" />
+  </EntityType>
+  <EntityType Name="UrunKategori">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EsnafId" Type="int" />
+    <Property Name="Ad" Type="nvarchar(max)" />
+    <Property Name="Sil" Type="bit" />
+  </EntityType>
+  <EntityType Name="Vergi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Oran" Type="int" />
+  </EntityType>
+  <Association Name="FK_Esnaf_EsnafHesap">
+    <End Role="HizmetKategori" Type="Self.HizmetKategori" Multiplicity="0..1" />
+    <End Role="Esnaf" Type="Self.Esnaf" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HizmetKategori">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Esnaf">
+        <PropertyRef Name="HizmetKategoriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Esnaf_Ilce">
+    <End Role="Ilce" Type="Self.Ilce" Multiplicity="0..1" />
+    <End Role="Esnaf" Type="Self.Esnaf" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ilce">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Esnaf">
+        <PropertyRef Name="IlceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HizmetSaat_Esnaf">
+    <End Role="Esnaf" Type="Self.Esnaf" Multiplicity="0..1" />
+    <End Role="HizmetSaat" Type="Self.HizmetSaat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Esnaf">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HizmetSaat">
+        <PropertyRef Name="EsnafId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kampanya_Esnaf">
+    <End Role="Esnaf" Type="Self.Esnaf" Multiplicity="0..1" />
+    <End Role="Kampanya" Type="Self.Kampanya" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Esnaf">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Kampanya">
+        <PropertyRef Name="EsnafId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MusteriAdes_Musteri">
+    <End Role="Musteri" Type="Self.Musteri" Multiplicity="0..1" />
+    <End Role="MusteriAdres" Type="Self.MusteriAdres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteri">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MusteriAdres">
+        <PropertyRef Name="MusteriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sayfa_MainSayfa">
+    <End Role="MainSayfa" Type="Self.MainSayfa" Multiplicity="0..1" />
+    <End Role="Sayfa" Type="Self.Sayfa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MainSayfa">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sayfa">
+        <PropertyRef Name="MainSayfaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SayfaYetki_kullanici">
+    <End Role="kullanici" Type="Self.kullanici" Multiplicity="1" />
+    <End Role="SayfaYetki" Type="Self.SayfaYetki" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kullanici">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SayfaYetki">
+        <PropertyRef Name="KulliciId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SayfaYetki_Sayfa">
+    <End Role="Sayfa" Type="Self.Sayfa" Multiplicity="1" />
+    <End Role="SayfaYetki" Type="Self.SayfaYetki" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sayfa">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SayfaYetki">
+        <PropertyRef Name="SayfaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparis_Esnaf1">
+    <End Role="Esnaf" Type="Self.Esnaf" Multiplicity="0..1" />
+    <End Role="Siparis" Type="Self.Siparis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Esnaf">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Siparis">
+        <PropertyRef Name="EsnafId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparis_Musteri">
+    <End Role="Musteri" Type="Self.Musteri" Multiplicity="0..1" />
+    <End Role="Siparis" Type="Self.Siparis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteri">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Siparis">
+        <PropertyRef Name="MusteriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparis_MusteriAdres">
+    <End Role="MusteriAdres" Type="Self.MusteriAdres" Multiplicity="0..1" />
+    <End Role="Siparis" Type="Self.Siparis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MusteriAdres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Siparis">
+        <PropertyRef Name="AdresId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparis_SiparisDurum">
+    <End Role="SiparisDurum" Type="Self.SiparisDurum" Multiplicity="0..1" />
+    <End Role="Siparis" Type="Self.Siparis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SiparisDurum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Siparis">
+        <PropertyRef Name="DurumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparis_SiparisOdemeTur">
+    <End Role="SiparisOdemeTur" Type="Self.SiparisOdemeTur" Multiplicity="0..1" />
+    <End Role="Siparis" Type="Self.Siparis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SiparisOdemeTur">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Siparis">
+        <PropertyRef Name="OdemeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SiparisDetay_Siparis">
+    <End Role="Siparis" Type="Self.Siparis" Multiplicity="0..1" />
+    <End Role="SiparisDetay" Type="Self.SiparisDetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Siparis">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SiparisDetay">
+        <PropertyRef Name="SiparisId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SiparisDetay_Urun">
+    <End Role="Urun" Type="Self.Urun" Multiplicity="0..1" />
+    <End Role="SiparisDetay" Type="Self.SiparisDetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SiparisDetay">
+        <PropertyRef Name="UrunId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urun_Esnaf">
+    <End Role="Esnaf" Type="Self.Esnaf" Multiplicity="0..1" />
+    <End Role="Urun" Type="Self.Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Esnaf">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="EsnafId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urun_UrunKategori">
+    <End Role="UrunKategori" Type="Self.UrunKategori" Multiplicity="0..1" />
+    <End Role="Urun" Type="Self.Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UrunKategori">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="KategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urun_Vergi">
+    <End Role="Vergi" Type="Self.Vergi" Multiplicity="0..1" />
+    <End Role="Urun" Type="Self.Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vergi">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="KdvId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UrunKategori_Esnaf">
+    <End Role="Esnaf" Type="Self.Esnaf" Multiplicity="0..1" />
+    <End Role="UrunKategori" Type="Self.UrunKategori" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Esnaf">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UrunKategori">
+        <PropertyRef Name="EsnafId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EsnafimEdirneModelStoreContainer">
+    <EntitySet Name="Esnaf" EntityType="Self.Esnaf" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EsnafHesap" EntityType="Self.EsnafHesap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EsnafKayitt" EntityType="Self.EsnafKayitt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HizmetKategori" EntityType="Self.HizmetKategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HizmetSaat" EntityType="Self.HizmetSaat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ilce" EntityType="Self.Ilce" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kampanya" EntityType="Self.Kampanya" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kullanici" EntityType="Self.kullanici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MainSayfa" EntityType="Self.MainSayfa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Musteri" EntityType="Self.Musteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MusteriAdres" EntityType="Self.MusteriAdres" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OdemeDurum" EntityType="Self.OdemeDurum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sayfa" EntityType="Self.Sayfa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SayfaYetki" EntityType="Self.SayfaYetki" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Siparis" EntityType="Self.Siparis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SiparisDetay" EntityType="Self.SiparisDetay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SiparisDurum" EntityType="Self.SiparisDurum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SiparisOdemeTur" EntityType="Self.SiparisOdemeTur" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UrunKategori" EntityType="Self.UrunKategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vergi" EntityType="Self.Vergi" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Esnaf_EsnafHesap" Association="Self.FK_Esnaf_EsnafHesap">
+      <End Role="HizmetKategori" EntitySet="HizmetKategori" />
+      <End Role="Esnaf" EntitySet="Esnaf" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Esnaf_Ilce" Association="Self.FK_Esnaf_Ilce">
+      <End Role="Ilce" EntitySet="Ilce" />
+      <End Role="Esnaf" EntitySet="Esnaf" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HizmetSaat_Esnaf" Association="Self.FK_HizmetSaat_Esnaf">
+      <End Role="Esnaf" EntitySet="Esnaf" />
+      <End Role="HizmetSaat" EntitySet="HizmetSaat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kampanya_Esnaf" Association="Self.FK_Kampanya_Esnaf">
+      <End Role="Esnaf" EntitySet="Esnaf" />
+      <End Role="Kampanya" EntitySet="Kampanya" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MusteriAdes_Musteri" Association="Self.FK_MusteriAdes_Musteri">
+      <End Role="Musteri" EntitySet="Musteri" />
+      <End Role="MusteriAdres" EntitySet="MusteriAdres" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sayfa_MainSayfa" Association="Self.FK_Sayfa_MainSayfa">
+      <End Role="MainSayfa" EntitySet="MainSayfa" />
+      <End Role="Sayfa" EntitySet="Sayfa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SayfaYetki_kullanici" Association="Self.FK_SayfaYetki_kullanici">
+      <End Role="kullanici" EntitySet="kullanici" />
+      <End Role="SayfaYetki" EntitySet="SayfaYetki" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SayfaYetki_Sayfa" Association="Self.FK_SayfaYetki_Sayfa">
+      <End Role="Sayfa" EntitySet="Sayfa" />
+      <End Role="SayfaYetki" EntitySet="SayfaYetki" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparis_Esnaf1" Association="Self.FK_Siparis_Esnaf1">
+      <End Role="Esnaf" EntitySet="Esnaf" />
+      <End Role="Siparis" EntitySet="Siparis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparis_Musteri" Association="Self.FK_Siparis_Musteri">
+      <End Role="Musteri" EntitySet="Musteri" />
+      <End Role="Siparis" EntitySet="Siparis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparis_MusteriAdres" Association="Self.FK_Siparis_MusteriAdres">
+      <End Role="MusteriAdres" EntitySet="MusteriAdres" />
+      <End Role="Siparis" EntitySet="Siparis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparis_SiparisDurum" Association="Self.FK_Siparis_SiparisDurum">
+      <End Role="SiparisDurum" EntitySet="SiparisDurum" />
+      <End Role="Siparis" EntitySet="Siparis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparis_SiparisOdemeTur" Association="Self.FK_Siparis_SiparisOdemeTur">
+      <End Role="SiparisOdemeTur" EntitySet="SiparisOdemeTur" />
+      <End Role="Siparis" EntitySet="Siparis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SiparisDetay_Siparis" Association="Self.FK_SiparisDetay_Siparis">
+      <End Role="Siparis" EntitySet="Siparis" />
+      <End Role="SiparisDetay" EntitySet="SiparisDetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SiparisDetay_Urun" Association="Self.FK_SiparisDetay_Urun">
+      <End Role="Urun" EntitySet="Urun" />
+      <End Role="SiparisDetay" EntitySet="SiparisDetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urun_Esnaf" Association="Self.FK_Urun_Esnaf">
+      <End Role="Esnaf" EntitySet="Esnaf" />
+      <End Role="Urun" EntitySet="Urun" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urun_UrunKategori" Association="Self.FK_Urun_UrunKategori">
+      <End Role="UrunKategori" EntitySet="UrunKategori" />
+      <End Role="Urun" EntitySet="Urun" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urun_Vergi" Association="Self.FK_Urun_Vergi">
+      <End Role="Vergi" EntitySet="Vergi" />
+      <End Role="Urun" EntitySet="Urun" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UrunKategori_Esnaf" Association="Self.FK_UrunKategori_Esnaf">
+      <End Role="Esnaf" EntitySet="Esnaf" />
+      <End Role="UrunKategori" EntitySet="UrunKategori" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

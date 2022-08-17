@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="62c5b392c4fa46adba566fbe7682bfbb" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="EsnafimEdirneModel.EsnafHesap" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.EsnafKayitt" Width="1.5" PointX="10.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.HizmetKategori" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.HizmetSaat" Width="1.5" PointX="5.25" PointY="16.5" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.Ilce" Width="1.5" PointX="0.75" PointY="10" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.Kampanya" Width="1.5" PointX="5.25" PointY="22.375" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.kullanici" Width="1.5" PointX="8" PointY="5.375" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.MainSayfa" Width="1.5" PointX="5.75" PointY="1.125" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.Musteri" Width="1.5" PointX="3" PointY="24.625" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.MusteriAdres" Width="1.5" PointX="3" PointY="17.75" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.OdemeDurum" Width="1.5" PointX="11.75" PointY="9.75" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.Roles" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.Sayfa" Width="1.5" PointX="8" PointY="0.875" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.SayfaYetki" Width="1.5" PointX="10.25" PointY="0.875" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.Siparis" Width="1.5" PointX="5.25" PointY="8.5" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.SiparisDetay" Width="1.5" PointX="9.75" PointY="10.25" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.SiparisDurum" Width="1.5" PointX="3" PointY="2.25" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.SiparisOdemeTur" Width="1.5" PointX="3" PointY="22" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.Urun" Width="1.5" PointX="7.5" PointY="11.75" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.UrunKategori" Width="1.5" PointX="5.25" PointY="19.5" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.Vergi" Width="1.5" PointX="5.25" PointY="5.625" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_SayfaYetki_kullanici" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_Sayfa_MainSayfa" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_MusteriAdes_Musteri" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_Siparis_Musteri" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_Siparis_MusteriAdres" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_SayfaYetki_Sayfa" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_Siparis_SiparisDurum" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_Siparis_SiparisOdemeTur" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_SiparisDetay_Siparis" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_SiparisDetay_Urun" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_Urun_UrunKategori" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_Urun_Vergi" />
+        <EntityTypeShape EntityType="EsnafimEdirneModel.Esnaf" Width="1.5" PointX="3" PointY="4.875" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_Esnaf_EsnafHesap" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_Esnaf_Ilce" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_HizmetSaat_Esnaf" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_Kampanya_Esnaf" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_Siparis_Esnaf1" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_Urun_Esnaf" />
+        <AssociationConnector Association="EsnafimEdirneModel.FK_UrunKategori_Esnaf" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

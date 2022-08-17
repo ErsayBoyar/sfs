@@ -1,0 +1,242 @@
+Esnaf Kayıt (POST)
+http://localhost:53490/api/Esnafkayit
+{
+  "FirmaUnvan": "Protect ltd şti",
+  "VergiNo": "1111111",
+  "KisaAd": "Protech",
+  "Telefon": "021645621",
+  "EPosta": "protech@gmail.com",
+  "HizmetKategoriID": 1,
+  "KapidaKredi": true,
+  "KapidaNakit": true,
+  "MinSiparis": 1500,
+  "Adres": "istanbul",
+  "Sifre": "1234",
+  "Token": "8794654",
+  "Lat": "156.124",
+  "Lon": "7894.456",
+  "FotoYol": "yyyy.jpg",
+  "EpostaOnay": true,
+  "HizmetBaslama1": "07:00:00",
+  "HizmetBitis1": "19:00:00",
+  "Hizmet1": true,
+  "HizmetBaslama2": "07:00:00",
+  "HizmetBitis2": "07:00:00",
+  "Hizmet2": true,
+  "HizmetBaslama3": "07:00:00",
+  "HizmetBitis3": "07:00:00",
+  "Hizmet3": true,
+  "HizmetBaslama4": "07:00:00",
+  "HizmetBitis4": "07:00:00",
+  "Hizmet4": true,
+  "HizmetBaslama5": "07:00:00",
+  "HizmetBitis5": "07:00:00",
+  "Hizmet5": true,
+  "HizmetBaslama6": "07:00:00",
+  "HizmetBitis6": "07:00:00",
+  "Hizmet6": true,
+  "HizmetBaslama7": "07:00:00",
+  "HizmetBitis7": "07:00:00",
+  "Hizmet7": true,
+}
+
+Esnaf Profil Güncelle (PUT)
+http://localhost:53490/api/EsnafProfilGuncelle
+{
+  "Id": 9,
+  "KisaAd": "test",
+  "Telefon": "1245",
+  "HizmetKategoriID": 1,
+  "KapidaKredi": true,
+  "KapidaNakit": true,
+  "MinSiparis": 15,
+  "Adres": "İstanbul",
+  "Sifre": "12345",
+  "Lat": "1234",
+  "Lon": "45645",
+  "FotoYol": "aaaa.jpg",
+  "HizmetBaslama1": "09:00:00",
+  "HizmetBitis1": "09:00:00",
+  "Hizmet1": true,
+  "HizmetBaslama2": "09:00:00",
+  "HizmetBitis2": "09:00:00",
+  "Hizmet2": true,
+  "HizmetBaslama3": "09:00:00",
+  "HizmetBitis3": "09:00:00",
+  "Hizmet3": true,
+  "HizmetBaslama4": "09:00:00",
+  "HizmetBitis4": "09:00:00",
+  "Hizmet4": true,
+  "HizmetBaslama5": "09:00:00",
+  "HizmetBitis5": "09:00:00",
+  "Hizmet5": true,
+  "HizmetBaslama6": "09:00:00",
+  "HizmetBitis6": "09:00:00",
+  "Hizmet6": true,
+  "HizmetBaslama7": "09:00:00",
+  "HizmetBitis7": "09:00:00",
+  "Hizmet7": true,
+}
+
+Esnaf Mail Onay (PUT)
+http://localhost:53490/api/EsnafMailOnay?esnafId=9
+{
+  "EPostaCheck": "744998"
+}
+
+
+EsnafGiris
+http://localhost:53490/api/EsnafGiris?eposta=a@a.com&sifre=1
+
+EsnafŞifre Sıfırlama (PUT)
+http://localhost:53490/api/EsnafSifreSifir?eposta=a@a.com
+
+
+Esnaf Token Guncelleme (PUT)
+http://localhost:53490/api/TokenGuncelle/1?token=79879879
+
+Musteri Kayıt (POST)
+{
+  "Ad": "Ersay",
+  "Soyad": "Boyar",
+  "EPosta": "ersay@catsbilisim.net",
+  "Telefon": "5541503367",
+  "Sifre": "123456",
+  "Token": "asd789879879",
+  "Lat": "175.465",
+  "Lon": "3.456454",
+}
+
+Müşteri Profil Guncelle (PUT)
+http://localhost:53490/api/MusteriProfilGuncelle
+{
+  "Id": 1002,
+  "Ad": "Mustafa",
+  "Soyad": "Deneme",
+  "Telefon": "5541503367",
+  "Sifre": "1234",
+  "Token": "ax1231111",
+  "Lat": "34.48484",
+  "Lon": "35.89797",
+}
+
+
+
+MusteriGiris
+http://localhost:53490/api/MusteriGiris?eposta=a@a.com&sifre=234
+
+Müşteri Şifre Sıfırlama (PUT)
+http://localhost:53490/api/SifreSifir?eposta=a@a.com
+
+
+
+Musteri Token Guncelleme (PUT)
+http://localhost:53490/api/TokenGuncelle/1?token=79879879
+
+
+
+Esnaf Durum Güncelleme (PUT)
+http://localhost:53490/api/EsnafOnlineDurum/1?durum=true
+
+Esnaf Ürün Kategori Ekleme (POST)
+http://localhost:53490/api/EsnafUrunKategoriAdd
+{
+  "EsnafId": 1,
+  "Ad": "mendil"
+}
+
+Ürün Kategori Sil (PUT)
+http://localhost:53490/api/UrunKategoriSil?urunid=2&sil=true (false olursa kategori yeniden aktif olur)
+
+Ürün Kategori Listeleme (GET)
+http://localhost:53490/api/UrunKategoriList?esnafid=1&sil=false
+
+Ürün Ekle (POST)
+http://localhost:53490/api/UrunEkle
+{
+  "Ad": "Ersay",
+  "Aciklama": "yeni ürün",
+  "Fiyat": 10.5,
+  "EsnafId": 1,
+  "KategoriId": 1,
+  "KdvId": 1,
+  "FotoYol": "huuhh.jpg",
+  "Mevrut":true
+}
+
+Ürün Güncelleme (PUT)
+http://localhost:53490/api/UrunDuzenleme?urunid=4&fotoyol=test.jpg&fiyat=12.4&urunad=Test&aciklama=test&kategoriId=1&mevcut=true
+
+
+Ürün Sil (PUT)
+http://localhost:53490/api/UrunSil?urunid=4&sil=true  (false olursa ürün yeniden aktif olur)
+
+
+Esnaf Ürün List (GET)
+http://localhost:53490/api/EsnafUrunList?esnafid=1&sil=false&mevcut=true
+
+Kategoriye Göre Ürün List (GET)
+http://localhost:53490/api/EsnafKategoriUrunList?kategoriId=1&sil=false&mevcut=true
+
+Kampanya Ekle (POST)
+{
+  "EsnafId": 1,
+  "BaslamaZamani": "2021-07-27T11:30",
+  "BitisZamani": "2021-07-28T11:30",
+  "Oran": 0.1
+
+ }
+
+Kampanya Listeleme (GET)
+http://localhost:53490/api/KampanyaList?esnafid=1
+
+Kampanya Sil (PUT)
+http://localhost:53490/api/KampanyaSil?kampanyaid=2&sil=true
+
+Anasayfa Kategoriler (GET)
+http://localhost:53490/api/AnasayfaKategoriList
+
+Öne Çıkanlar (GET)
+http://localhost:53490/api/OneCikanlarList
+
+
+Kategoriye Göre Esnaf Listeleme (GET)
+http://localhost:53490/api/HizmetKategoriEsnafList?hizmetKategoriId=1
+
+Search (GET)
+http://localhost:53490/api/SearchList?keyword=er
+
+
+Esnaf Ürün List (GET)
+http://localhost:53490/api/EsnafUrunList?esnafid=1
+
+Ödeme Durum Listesi (GET)
+http://localhost:53490/api/OdemeDurum
+
+
+Müşteri Adres Ekle (POST)
+http://localhost:53490/api/MusteriAdresEkle
+{
+  "MusteriId": 2,
+  "AdresAd": "TEST",
+  "Adres": "bahcelievler mahallesi",
+  "BinaNo": "17",
+  "Daire": "11",
+  "Kat": "3",
+  "Lat": "3.8494",
+  "Lon": "2.879",
+  "AdresTarifi": "deneme",
+}
+
+Müşteri Adres List (GET)
+http://localhost:53490/api/MusteriAdresList?musteriId=1
+
+
+Sepete Ürün Ekle Oluştur (POST)
+http://localhost:53490/api/SiparisOlustur
+{
+  "MusteriId": 1,
+  "EsnafId": 2,
+  "UrunId": 2,
+  "Adet": 2,
+}
